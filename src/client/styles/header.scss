@@ -1,0 +1,46 @@
+/* header.scss */
+
+$headerBackgroundColor: #333; 
+$headerTextColor: #fff; 
+$menuLinkColor: #fff; 
+$menuLinkHoverColor: #1eb016; 
+
+header {
+  background-color: $headerBackgroundColor;
+  color: $headerTextColor;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 1.5em; 
+    font-weight: bold;
+  }
+
+  .menu {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin-right: 15px; // Set your desired margin between menu items
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: $menuLinkColor;
+          transition: color 0.3s ease; 
+
+          &:hover {
+            color: $menuLinkHoverColor;
+          }
+        }
+      }
+    }
+  }
+}

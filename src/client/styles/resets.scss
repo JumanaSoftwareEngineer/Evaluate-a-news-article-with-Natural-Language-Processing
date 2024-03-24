@@ -1,0 +1,49 @@
+/* resets.scss */
+
+$tableWidth: 80%;
+$boxPadding: 20px;
+
+html, body, h1, h2, h3, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+  font-family: 'Georgia', serif;
+}
+
+#error {
+  width: $tableWidth;
+  margin: 0 auto;
+  padding: $boxPadding;
+  border: 2px solid red;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+}
+
+#results {
+  width: $tableWidth;
+  margin: 0 auto;
+  padding: $boxPadding;
+  border: 2px solid green;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid #ccc;
+      padding: 8px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

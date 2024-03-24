@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                Logo
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a</li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" id="myForm" >
+                    <label for="URI">Enter an Article URL:</label>
+                    <input id="URL" type="text" value="" placeholder="Enter the articale url">
+                    <input type="submit" value="Analyze">
+                </form>
+            </section>
+
+            <section>
+                <div id="error" style="display: none;"></div>
+                <div id="results" style="display: none;">
+                    <h2>Results:</h2>
+                    <ul id="resultsList">
+                        <li id="agreement"></li>
+                        <li id="subjectivity"></li>
+                        <li id="confidence"></li>
+                        <li id="irony"></li>
+                        <li id="score_tag"></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+        <!-- <script>
+            const apiKey = '<%= process.env.API_KEY %>';
+        </script> -->
+    </body>
+</html>

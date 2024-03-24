@@ -1,0 +1,46 @@
+/* form.scss */
+
+$boxWidth: 600px;
+$boxPadding: 20px;
+$inputMarginBottom: 10px;
+$inputPadding: 8px;
+$submitButtonBackgroundColor: #05944f;
+$submitButtonColor: #fff;
+$submitButtonHoverColor: darken($submitButtonBackgroundColor, 10%);
+
+form {
+  width: $boxWidth;
+  margin: 0 auto;
+  padding: $boxPadding;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  input {
+    margin-bottom: $inputMarginBottom;
+    padding: $inputPadding;
+    width: 500px;
+  }
+
+  input[type="submit"] {
+    background-color: $submitButtonBackgroundColor;
+    color: $submitButtonColor;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $submitButtonHoverColor;
+    }
+  }
+}
